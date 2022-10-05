@@ -7,6 +7,7 @@
 
 from runner.koan import *
 
+
 class AboutLists(Koan):
     def test_creating_lists(self):
         empty_list = list()
@@ -27,7 +28,7 @@ class AboutLists(Koan):
         self.assertListEqual([1, 2, __], nums)
 
     def test_accessing_list_elements(self):
-        noms = ['peanut', 'butter', 'and', 'jelly']
+        noms = ["peanut", "butter", "and", "jelly"]
 
         self.assertEqual(__, noms[0])
         self.assertEqual(__, noms[3])
@@ -35,7 +36,7 @@ class AboutLists(Koan):
         self.assertEqual(__, noms[-3])
 
     def test_slicing_lists(self):
-        noms = ['peanut', 'butter', 'and', 'jelly']
+        noms = ["peanut", "butter", "and", "jelly"]
 
         self.assertEqual(__, noms[0:1])
         self.assertEqual(__, noms[0:2])
@@ -46,14 +47,14 @@ class AboutLists(Koan):
         self.assertEqual(__, noms[5:0])
 
     def test_slicing_to_the_edge(self):
-        noms = ['peanut', 'butter', 'and', 'jelly']
+        noms = ["peanut", "butter", "and", "jelly"]
 
         self.assertEqual(__, noms[2:])
         self.assertEqual(__, noms[:2])
 
     def test_lists_and_ranges(self):
         self.assertEqual(range, type(range(5)))
-        self.assertNotEqual([1, 2, 3, 4, 5], range(1,6))
+        self.assertNotEqual([1, 2, 3, 4, 5], range(1, 6))
         self.assertEqual(__, list(range(5)))
         self.assertEqual(__, list(range(5, 9)))
 
@@ -65,16 +66,16 @@ class AboutLists(Koan):
         self.assertEqual(__, list(range(5, -8, -4)))
 
     def test_insertions(self):
-        knight = ['you', 'shall', 'pass']
-        knight.insert(2, 'not')
+        knight = ["you", "shall", "pass"]
+        knight.insert(2, "not")
         self.assertEqual(__, knight)
 
-        knight.insert(0, 'Arthur')
+        knight.insert(0, "Arthur")
         self.assertEqual(__, knight)
 
     def test_popping_lists(self):
         stack = [10, 20, 30, 40]
-        stack.append('last')
+        stack.append("last")
 
         self.assertEqual(__, stack)
 
@@ -96,7 +97,7 @@ class AboutLists(Koan):
 
     def test_making_queues(self):
         queue = [1, 2]
-        queue.append('last')
+        queue.append("last")
 
         self.assertEqual(__, queue)
 
@@ -106,4 +107,3 @@ class AboutLists(Koan):
 
         # Note, popping from the left hand side of a list is
         # inefficient. Use collections.deque instead.
-
