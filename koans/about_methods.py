@@ -168,11 +168,11 @@ class AboutMethods(Koan):
         self,
     ):
         rover = self.Dog()
-        with self.assertRaises(___):
+        with self.assertRaises(AttributeError):
             password = rover.__password()
 
         # But this still is!
-        self.assertEqual(__, rover._Dog__password())
+        self.assertEqual("password", rover._Dog__password())
 
         # Name mangling exists to avoid name clash issues when subclassing.
         # It is not for providing effective access protection
