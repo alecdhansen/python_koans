@@ -18,7 +18,23 @@
 #
 def triangle(a, b, c):
     # DELETE 'PASS' AND WRITE THIS CODE
-    pass
+    if a <= 0 or b <= 0 or c <= 0:
+        raise TriangleError(AttributeError("Sides must be longer than 0"))
+    if a + b + c <= 2 * max(
+        a, b, c
+    ):  # https://docs.python.org/3/library/functions.html?highlight=max#max
+        raise TriangleError(
+            AttributeError(
+                "largest side should be greater than the sum of the smaller two sides"
+            )
+        )
+    if a == b == c:
+        return "equilateral"
+    elif a == b > c or b == c > a or a == c > b:
+        return "isosceles"
+    elif a != b != c:
+        return "scalene"
+
 
 # Error class used in part 2.  No need to change this code.
 class TriangleError(Exception):
